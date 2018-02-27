@@ -1,0 +1,33 @@
+{
+    "name": "jfuentestgn/pdfinfo",
+    "description": "PHP Wrapper for pdfinfo command",
+    "type": "library",
+    "require": {
+        "symfony/process": "^3.0",
+        "spatie/pdf-to-text": "^1.0"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Juan Fuentes",
+            "email": "jfuentestgna@gmail.com"
+        }
+    ],
+    "require-dev": {
+        "phpunit/phpunit": "~5.0",
+        "squizlabs/php_codesniffer": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "JFuentesTgn\\PdfInfo\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "JFuentesTgn\\PdfInfo\\Test\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "./vendor/bin/phpunit"
+    }
+}
