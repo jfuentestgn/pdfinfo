@@ -53,7 +53,7 @@ $info = \JFuentesTgn\pdfinfo\Pdf::getInfo('dummy.pdf');
 
 ## Credits
 
-This package is maintained by [Juan Fuentes](https://github.com/jfuentestgn). It's based on [spatie/pdftotext](https://github.com/spatie/pdftotext).
+This package is maintained by [Juan Fuentes](https://github.com/jfuentestgn). It's based on [spatie/pdftotext](https://github.com/spatie/pdf-to-text).
 
 
 ## License
