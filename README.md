@@ -3,7 +3,7 @@ PDF Info
 
 Simple class to retrieve basic information from PDF file
 
-This class extends uses spatie/pdftotext and extends it to read metadata from a PDF file. It acts as a wrapper for pdfinfo command.
+This class uses spatie/pdf-to-text and extends it to read metadata from a PDF file. It acts as a wrapper for pdfinfo command.
 
 ## Requirements
 
