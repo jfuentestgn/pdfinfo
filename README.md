@@ -1,40 +1,35 @@
-Laravel Cache Downloader
+PDF Info
 =======================
 
-[![Work in progress](https://img.shields.io/waffle/label/evancohen/smart-mirror/in%20progress.svg?style=plastic)]()
-[![License: MIT](https://img.shields.io/packagist/l/doctrine/orm.svg?style=plastic)]()
+Simple class to retrieve basic information from PDF file
 
-Introduction ....
+This class extends uses spatie/pdftotext and extends it to read metadata from a PDF file. It acts as a wrapper for pdfinfo command.
 
 ## Requirements
 
 * PHP >= 5.6.4
-* xxxxx
+* pdfinfo
+
+Be sure to check if pdfinfo is installed in your system before using this package
 
 ## Installation
 
-How to install package
+You should use the pdfinfo class with composer, from command line:
 
 ```bash
-$ composer require jfuentestgn/cache-url-downloader
+$ composer require jfuentestgn/pdfinfo
 ```
+
+or declaring it in your project's composer.json file:
 
 ```json
 {
     "require": {
-        "jfuentestgn/cache-url-downloader": "dev-master"
+        "jfuentestgn/pdfinfo": "dev-master"
     }
 }
 ```
 
-
-```php
-  'providers' => [
-    ....
-    JFuentesTgn\CacheUrlDownloader\ServiceProvider::class,
-    ...
-    ]
-```
 
 
 ## Configuration
@@ -43,17 +38,24 @@ No config needed
 
 ## Usage
 
-In Laravel, .......
+You can use the Pdf class in a similar way thay you would do with spatie's one:
 
-xxxx
+```php
+use JFuentesTgn\pdfinfo\Pdf;
 
-
+$info = (new Pdf())->setPdf('dummy.pdf')->info();
+print_r($info);
+```
+or:
+```php
+$info = \JFuentesTgn\pdfinfo\Pdf::getInfo('dummy.pdf');
+```
 
 ## Credits
 
-This package is maintained by [Juan Fuentes](https://github.com/jfuentestgn)
+This package is maintained by [Juan Fuentes](https://github.com/jfuentestgn). It's based on [spatie/pdftotext](https://github.com/spatie/pdftotext).
 
 
 ## License
 
-Cache Downloader is licensed under [The MIT License (MIT)](LICENSE).
+This package is licensed under [The MIT License (MIT)](LICENSE).
